@@ -5,7 +5,32 @@
   text-align: center;
 }
 
+.wrapper {
+  display: flex;
+}
+
 .map {
   width: 500px;
   height: 500px;
+}
+
+.marker {
+  background-color: black;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.marker:hover {
+  background-color: brown;
+}
+
+.item {
+  cursor: pointer;
+  background-color: aquamarine;
+  padding: 5px 10px;
+}
+
+.item:hover {
+  background-color: rgb(21, 243, 169);
 }

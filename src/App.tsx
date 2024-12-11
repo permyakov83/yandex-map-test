@@ -15,21 +15,29 @@ const LOCATION: YMapLocationRequest = {
 
 function App() {
   return (
-    <div style={{ width: '600px', height: '400px' }}>
-      <YMap location={reactify.useDefault(LOCATION)}>
-        <YMapDefaultSchemeLayer />
-        <YMapDefaultFeaturesLayer />
+    <>
+      <div className='wrapper'>
+        <div style={{ width: '600px', height: '400px' }}>
+          <YMap location={reactify.useDefault(LOCATION)}>
+            <YMapDefaultSchemeLayer />
+            <YMapDefaultFeaturesLayer />
 
-        <YMapMarker
-          coordinates={reactify.useDefault([37.588144, 55.733842])}
-          draggable={true}
-        >
-          <section>
-            <h1>You can drag this header</h1>
-          </section>
-        </YMapMarker>
-      </YMap>
-    </div>
+            <YMapMarker
+              coordinates={reactify.useDefault([37.588144, 55.733842])}
+            >
+              <section>
+                <div className='marker'></div>
+              </section>
+            </YMapMarker>
+          </YMap>
+        </div>
+        <ul>
+          <li className='item' onMouseOver={markerHover}>
+            Первый маркер
+          </li>
+        </ul>
+      </div>
+    </>
   );
 }
 
